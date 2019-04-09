@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SigtiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Categoria">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Codigo" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="Activo" Type="bit" />
+  </EntityType>
+  <EntityType Name="Ciudades">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Laptitud" Type="float" Nullable="false" />
+    <Property Name="Codigo" Type="int" Nullable="false" />
+    <Property Name="Longitud" Type="float" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="IdPais" Type="int" Nullable="false" />
+    <Property Name="Activo" Type="bit" />
+  </EntityType>
+  <EntityType Name="Clientes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Documento" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Primer_nombre" Type="varchar" MaxLength="30" />
+    <Property Name="Segundo_nombre" Type="varchar" MaxLength="30" />
+    <Property Name="Primer_apellido" Type="varchar" MaxLength="30" />
+    <Property Name="Segundo_apellido" Type="varchar" MaxLength="30" />
+    <Property Name="Direccion" Type="varchar" MaxLength="45" />
+    <Property Name="Telefono_fijo" Type="varchar" MaxLength="20" />
+    <Property Name="Movil" Type="varchar" MaxLength="20" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="idTipoDocumento" Type="int" Nullable="false" />
+    <Property Name="idCiudad" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Pais">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Laptitud" Type="float" Nullable="false" />
+    <Property Name="Codigo" Type="int" Nullable="false" />
+    <Property Name="Longitud" Type="float" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="Activo" Type="bit" />
+  </EntityType>
+  <EntityType Name="SettingEntity">
+    <Key>
+      <PropertyRef Name="SettingEntityId" />
+    </Key>
+    <Property Name="SettingEntityId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Value" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="text" />
+    <Property Name="IsCypher" Type="bit" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="SettingEntityTypeId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SettingEntityTypeCat">
+    <Key>
+      <PropertyRef Name="SettingEntityTypeId" />
+    </Key>
+    <Property Name="SettingEntityTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Ciudades_Pais">
+    <End Role="Pais" Type="Self.Pais" Multiplicity="1" />
+    <End Role="Ciudades" Type="Self.Ciudades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pais">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ciudades">
+        <PropertyRef Name="IdPais" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Clientes_Ciudades">
+    <End Role="Ciudades" Type="Self.Ciudades" Multiplicity="1" />
+    <End Role="Clientes" Type="Self.Clientes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ciudades">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Clientes">
+        <PropertyRef Name="idCiudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SettingEntity_SettingEntityTypeCat">
+    <End Role="SettingEntityTypeCat" Type="Self.SettingEntityTypeCat" Multiplicity="1" />
+    <End Role="SettingEntity" Type="Self.SettingEntity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SettingEntityTypeCat">
+        <PropertyRef Name="SettingEntityTypeId" />
+      </Principal>
+      <Dependent Role="SettingEntity">
+        <PropertyRef Name="SettingEntityTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SigtiModelStoreContainer">
+    <EntitySet Name="Categoria" EntityType="Self.Categoria" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ciudades" EntityType="Self.Ciudades" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Clientes" EntityType="Self.Clientes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pais" EntityType="Self.Pais" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SettingEntity" EntityType="Self.SettingEntity" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SettingEntityTypeCat" EntityType="Self.SettingEntityTypeCat" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Ciudades_Pais" Association="Self.FK_Ciudades_Pais">
+      <End Role="Pais" EntitySet="Pais" />
+      <End Role="Ciudades" EntitySet="Ciudades" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Clientes_Ciudades" Association="Self.FK_Clientes_Ciudades">
+      <End Role="Ciudades" EntitySet="Ciudades" />
+      <End Role="Clientes" EntitySet="Clientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SettingEntity_SettingEntityTypeCat" Association="Self.FK_SettingEntity_SettingEntityTypeCat">
+      <End Role="SettingEntityTypeCat" EntitySet="SettingEntityTypeCat" />
+      <End Role="SettingEntity" EntitySet="SettingEntity" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

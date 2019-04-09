@@ -1,0 +1,12 @@
+C:\Sigti\PlataformaSigti\Sigti\CapaDominioModel\bin\Debug\CapaDominioModel.dll.config
+C:\Sigti\PlataformaSigti\Sigti\CapaDominioModel\bin\Debug\CapaDominioModel.dll
+C:\Sigti\PlataformaSigti\Sigti\CapaDominioModel\bin\Debug\CapaDominioModel.pdb
+C:\Sigti\PlataformaSigti\Sigti\CapaDominioModel\bin\Debug\EntityFramework.dll
+C:\Sigti\PlataformaSigti\Sigti\CapaDominioModel\bin\Debug\EntityFramework.SqlServer.dll
+C:\Sigti\PlataformaSigti\Sigti\CapaDominioModel\bin\Debug\EntityFramework.xml
+C:\Sigti\PlataformaSigti\Sigti\CapaDominioModel\bin\Debug\EntityFramework.SqlServer.xml
+C:\Sigti\PlataformaSigti\Sigti\CapaDominioModel\obj\Debug\CapaDominioModel.csprojAssemblyReference.cache
+C:\Sigti\PlataformaSigti\Sigti\CapaDominioModel\obj\Debug\CapaDominioModel.csproj.CoreCompileInputs.cache
+C:\Sigti\PlataformaSigti\Sigti\CapaDominioModel\obj\Debug\CapaDominioModel.csproj.CopyComplete
+C:\Sigti\PlataformaSigti\Sigti\CapaDominioModel\obj\Debug\CapaDominioModel.dll
+C:\Sigti\PlataformaSigti\Sigti\CapaDominioModel\obj\Debug\CapaDominioModel.pdb

@@ -1,0 +1,15 @@
+C:\Sigti\PlataformaSigti\Sigti\CapaBusinessLayer\bin\Debug\CapaBusinessLayer.dll
+C:\Sigti\PlataformaSigti\Sigti\CapaBusinessLayer\bin\Debug\CapaBusinessLayer.pdb
+C:\Sigti\PlataformaSigti\Sigti\CapaBusinessLayer\bin\Debug\CapaAccesoDatos.dll
+C:\Sigti\PlataformaSigti\Sigti\CapaBusinessLayer\bin\Debug\CapaDominioModel.dll
+C:\Sigti\PlataformaSigti\Sigti\CapaBusinessLayer\bin\Debug\EntityFramework.dll
+C:\Sigti\PlataformaSigti\Sigti\CapaBusinessLayer\bin\Debug\CapaAccesoDatos.pdb
+C:\Sigti\PlataformaSigti\Sigti\CapaBusinessLayer\bin\Debug\CapaAccesoDatos.dll.config
+C:\Sigti\PlataformaSigti\Sigti\CapaBusinessLayer\bin\Debug\CapaDominioModel.pdb
+C:\Sigti\PlataformaSigti\Sigti\CapaBusinessLayer\bin\Debug\CapaDominioModel.dll.config
+C:\Sigti\PlataformaSigti\Sigti\CapaBusinessLayer\bin\Debug\EntityFramework.xml
+C:\Sigti\PlataformaSigti\Sigti\CapaBusinessLayer\obj\Debug\CapaBusinessLayer.csprojAssemblyReference.cache
+C:\Sigti\PlataformaSigti\Sigti\CapaBusinessLayer\obj\Debug\CapaBusinessLayer.csproj.CoreCompileInputs.cache
+C:\Sigti\PlataformaSigti\Sigti\CapaBusinessLayer\obj\Debug\CapaBusinessLayer.csproj.CopyComplete
+C:\Sigti\PlataformaSigti\Sigti\CapaBusinessLayer\obj\Debug\CapaBusinessLayer.dll
+C:\Sigti\PlataformaSigti\Sigti\CapaBusinessLayer\obj\Debug\CapaBusinessLayer.pdb

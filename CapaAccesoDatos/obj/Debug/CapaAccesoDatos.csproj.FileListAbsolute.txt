@@ -1,0 +1,15 @@
+C:\Sigti\PlataformaSigti\Sigti\CapaAccesoDatos\bin\Debug\CapaAccesoDatos.dll.config
+C:\Sigti\PlataformaSigti\Sigti\CapaAccesoDatos\bin\Debug\CapaAccesoDatos.dll
+C:\Sigti\PlataformaSigti\Sigti\CapaAccesoDatos\bin\Debug\CapaAccesoDatos.pdb
+C:\Sigti\PlataformaSigti\Sigti\CapaAccesoDatos\bin\Debug\CapaDominioModel.dll
+C:\Sigti\PlataformaSigti\Sigti\CapaAccesoDatos\bin\Debug\EntityFramework.dll
+C:\Sigti\PlataformaSigti\Sigti\CapaAccesoDatos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Sigti\PlataformaSigti\Sigti\CapaAccesoDatos\bin\Debug\CapaDominioModel.pdb
+C:\Sigti\PlataformaSigti\Sigti\CapaAccesoDatos\bin\Debug\CapaDominioModel.dll.config
+C:\Sigti\PlataformaSigti\Sigti\CapaAccesoDatos\bin\Debug\EntityFramework.xml
+C:\Sigti\PlataformaSigti\Sigti\CapaAccesoDatos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Sigti\PlataformaSigti\Sigti\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.csprojAssemblyReference.cache
+C:\Sigti\PlataformaSigti\Sigti\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.csproj.CoreCompileInputs.cache
+C:\Sigti\PlataformaSigti\Sigti\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.csproj.CopyComplete
+C:\Sigti\PlataformaSigti\Sigti\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.dll
+C:\Sigti\PlataformaSigti\Sigti\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.pdb

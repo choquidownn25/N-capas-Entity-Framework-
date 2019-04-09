@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SigtiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Categoria">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Codigo" Type="Int32" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Activo" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Ciudades">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Laptitud" Type="Double" Nullable="false" />
+    <Property Name="Codigo" Type="Int32" Nullable="false" />
+    <Property Name="Longitud" Type="Double" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdPais" Type="Int32" Nullable="false" />
+    <Property Name="Activo" Type="Boolean" />
+    <NavigationProperty Name="Pais" Relationship="Self.FK_Ciudades_Pais" FromRole="Ciudades" ToRole="Pais" />
+    <NavigationProperty Name="Clientes" Relationship="Self.FK_Clientes_Ciudades" FromRole="Ciudades" ToRole="Clientes" />
+  </EntityType>
+  <EntityType Name="Clientes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Documento" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Primer_nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Segundo_nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Primer_apellido" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Segundo_apellido" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Direccion" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Telefono_fijo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Movil" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="idTipoDocumento" Type="Int32" Nullable="false" />
+    <Property Name="idCiudad" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Ciudades" Relationship="Self.FK_Clientes_Ciudades" FromRole="Clientes" ToRole="Ciudades" />
+  </EntityType>
+  <EntityType Name="Pais">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Laptitud" Type="Double" Nullable="false" />
+    <Property Name="Codigo" Type="Int32" Nullable="false" />
+    <Property Name="Longitud" Type="Double" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Activo" Type="Boolean" />
+    <NavigationProperty Name="Ciudades" Relationship="Self.FK_Ciudades_Pais" FromRole="Pais" ToRole="Ciudades" />
+  </EntityType>
+  <EntityType Name="SettingEntity">
+    <Key>
+      <PropertyRef Name="SettingEntityId" />
+    </Key>
+    <Property Name="SettingEntityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Value" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IsCypher" Type="Boolean" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="SettingEntityTypeId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="SettingEntityTypeCat" Relationship="Self.FK_SettingEntity_SettingEntityTypeCat" FromRole="SettingEntity" ToRole="SettingEntityTypeCat" />
+  </EntityType>
+  <EntityType Name="SettingEntityTypeCat">
+    <Key>
+      <PropertyRef Name="SettingEntityTypeId" />
+    </Key>
+    <Property Name="SettingEntityTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="SettingEntity" Relationship="Self.FK_SettingEntity_SettingEntityTypeCat" FromRole="SettingEntityTypeCat" ToRole="SettingEntity" />
+  </EntityType>
+  <Association Name="FK_Ciudades_Pais">
+    <End Role="Pais" Type="Self.Pais" Multiplicity="1" />
+    <End Role="Ciudades" Type="Self.Ciudades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pais">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ciudades">
+        <PropertyRef Name="IdPais" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Clientes_Ciudades">
+    <End Role="Ciudades" Type="Self.Ciudades" Multiplicity="1" />
+    <End Role="Clientes" Type="Self.Clientes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ciudades">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Clientes">
+        <PropertyRef Name="idCiudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SettingEntity_SettingEntityTypeCat">
+    <End Role="SettingEntityTypeCat" Type="Self.SettingEntityTypeCat" Multiplicity="1" />
+    <End Role="SettingEntity" Type="Self.SettingEntity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SettingEntityTypeCat">
+        <PropertyRef Name="SettingEntityTypeId" />
+      </Principal>
+      <Dependent Role="SettingEntity">
+        <PropertyRef Name="SettingEntityTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SigtiEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Categoria" EntityType="Self.Categoria" />
+    <EntitySet Name="Ciudades" EntityType="Self.Ciudades" />
+    <EntitySet Name="Clientes" EntityType="Self.Clientes" />
+    <EntitySet Name="Pais" EntityType="Self.Pais" />
+    <EntitySet Name="SettingEntity" EntityType="Self.SettingEntity" />
+    <EntitySet Name="SettingEntityTypeCat" EntityType="Self.SettingEntityTypeCat" />
+    <AssociationSet Name="FK_Ciudades_Pais" Association="Self.FK_Ciudades_Pais">
+      <End Role="Pais" EntitySet="Pais" />
+      <End Role="Ciudades" EntitySet="Ciudades" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Clientes_Ciudades" Association="Self.FK_Clientes_Ciudades">
+      <End Role="Ciudades" EntitySet="Ciudades" />
+      <End Role="Clientes" EntitySet="Clientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SettingEntity_SettingEntityTypeCat" Association="Self.FK_SettingEntity_SettingEntityTypeCat">
+      <End Role="SettingEntityTypeCat" EntitySet="SettingEntityTypeCat" />
+      <End Role="SettingEntity" EntitySet="SettingEntity" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

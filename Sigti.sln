@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sigti", "Sigti\Sigti.csproj", "{56681BED-1044-4B28-B844-7E0F21E534DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SigtiMVC", "SigtiMVC\SigtiMVC.csproj", "{1FFE819F-71AE-4469-84D6-B0EDC5D8C0C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaAccesoDatos", "CapaAccesoDatos\CapaAccesoDatos.csproj", "{57E529B0-57F2-4F6D-B485-DF2F1BFF2935}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDominioModel", "CapaDominioModel\CapaDominioModel.csproj", "{3A4445BC-FEF4-4705-8A08-3851DEF7DA13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaCore", "CapaCore\CapaCore.csproj", "{5A676761-0E3B-47F0-A9BF-DD8B102FD0A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaInfrastructura", "CapaInfrastructura\CapaInfrastructura.csproj", "{A8642585-F6EE-4680-AB4B-99E383BA8FEA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56681BED-1044-4B28-B844-7E0F21E534DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56681BED-1044-4B28-B844-7E0F21E534DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56681BED-1044-4B28-B844-7E0F21E534DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56681BED-1044-4B28-B844-7E0F21E534DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FFE819F-71AE-4469-84D6-B0EDC5D8C0C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FFE819F-71AE-4469-84D6-B0EDC5D8C0C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FFE819F-71AE-4469-84D6-B0EDC5D8C0C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FFE819F-71AE-4469-84D6-B0EDC5D8C0C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57E529B0-57F2-4F6D-B485-DF2F1BFF2935}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57E529B0-57F2-4F6D-B485-DF2F1BFF2935}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57E529B0-57F2-4F6D-B485-DF2F1BFF2935}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57E529B0-57F2-4F6D-B485-DF2F1BFF2935}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A4445BC-FEF4-4705-8A08-3851DEF7DA13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A4445BC-FEF4-4705-8A08-3851DEF7DA13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A4445BC-FEF4-4705-8A08-3851DEF7DA13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A4445BC-FEF4-4705-8A08-3851DEF7DA13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A676761-0E3B-47F0-A9BF-DD8B102FD0A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A676761-0E3B-47F0-A9BF-DD8B102FD0A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A676761-0E3B-47F0-A9BF-DD8B102FD0A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A676761-0E3B-47F0-A9BF-DD8B102FD0A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8642585-F6EE-4680-AB4B-99E383BA8FEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8642585-F6EE-4680-AB4B-99E383BA8FEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8642585-F6EE-4680-AB4B-99E383BA8FEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8642585-F6EE-4680-AB4B-99E383BA8FEA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {56006657-08D5-42E2-A77C-051A4F536159}
+	EndGlobalSection
+EndGlobal

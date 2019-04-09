@@ -1,0 +1,15 @@
+C:\Sigti\PlataformaSigti\Sigti\CapaService\obj\Debug\netstandard2.0\CapaService.csprojAssemblyReference.cache
+C:\Sigti\PlataformaSigti\Sigti\CapaService\obj\Debug\netstandard2.0\CapaService.csproj.CoreCompileInputs.cache
+C:\Sigti\PlataformaSigti\Sigti\CapaService\obj\Debug\netstandard2.0\CapaService.AssemblyInfoInputs.cache
+C:\Sigti\PlataformaSigti\Sigti\CapaService\obj\Debug\netstandard2.0\CapaService.AssemblyInfo.cs
+C:\Sigti\PlataformaSigti\Sigti\CapaService\bin\Debug\netstandard2.0\CapaService.deps.json
+C:\Sigti\PlataformaSigti\Sigti\CapaService\bin\Debug\netstandard2.0\CapaService.dll
+C:\Sigti\PlataformaSigti\Sigti\CapaService\bin\Debug\netstandard2.0\CapaService.pdb
+C:\Sigti\PlataformaSigti\Sigti\CapaService\bin\Debug\netstandard2.0\CapaDominioModel.dll
+C:\Sigti\PlataformaSigti\Sigti\CapaService\bin\Debug\netstandard2.0\System.ComponentModel.DataAnnotations.dll
+C:\Sigti\PlataformaSigti\Sigti\CapaService\bin\Debug\netstandard2.0\CapaDominioModel.pdb
+C:\Sigti\PlataformaSigti\Sigti\CapaService\bin\Debug\netstandard2.0\CapaDominioModel.dll.config
+C:\Sigti\PlataformaSigti\Sigti\CapaService\bin\Debug\netstandard2.0\System.ComponentModel.DataAnnotations.xml
+C:\Sigti\PlataformaSigti\Sigti\CapaService\obj\Debug\netstandard2.0\CapaService.csproj.CopyComplete
+C:\Sigti\PlataformaSigti\Sigti\CapaService\obj\Debug\netstandard2.0\CapaService.dll
+C:\Sigti\PlataformaSigti\Sigti\CapaService\obj\Debug\netstandard2.0\CapaService.pdb
